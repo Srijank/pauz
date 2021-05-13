@@ -3,8 +3,8 @@ import "./Input.css";
 const Input = (props) => {
   return (
     <div className="Input">
-      <label htmlFor={props.name}>{props.label}</label>
-      <input
+      <label className="field" htmlFor={props.name}>{props.label}<br/></label>
+      <input className="takinginput"
         type={props.type}
         id={props.name}
         name={props.name}

@@ -2,9 +2,12 @@
   padding: 10px 20px;
   border: none;
   color: #ffffff;
-  background-color: #3D3D4E;
+  background-color: #3d3d4e;
   border-radius: 10px;
   cursor: pointer;
+  padding: 20 20;
+  line-height: 20px;
+  width: 100%;
 }
 
 .Button:hover {
@@ -12,9 +15,9 @@
 }
 
 .primary {
-  background-color: #F15F31;
+  background-color: #f15f31;
 }
 
 .danger {
-  background-color: #DF1125;
+  background-color: #df1125;
 }
