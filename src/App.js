@@ -1,25 +1,57 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
 
-function App() {
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { connect } from "react-redux";
+
+import PrivateRoute from "./routes/PrivateRoute";
+import PublicRoute from "./routes/PublicRoute";
+
+import LandingPage from "./components/LandingPage";
+import Signup from "./components/Signup";
+import Login from "./components/Login";
+
+import Home from "./components/Home";
+import Connect from "./components/Connect";
+import AddPost from "./components/AddPost";
+import Profile from "./components/Profile";
+
+import Alert from "./components/Alert";
+import Loading from "./components/Loading";
+
+import UnknownPage from "./components/UnknownPage";
+
+const mapStateToProps = (state) => {
+  return {
+    loading: state.loading,
+    alert: state.alert,
+  };
+};
+
+const App = (props) => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+    <Router>
+      <div className="App">
+        {props.loading && <Loading />}
+        {props.alert && <Alert />}
 
-export default App;
+        <Switch>
+          <PublicRoute component={Signup} path="/signup" exact />
+          <PublicRoute component={Login} path="/login" exact />
+          <PublicRoute component={LandingPage} path="/" exact />
+
+          <PrivateRoute component={Home} path="/home" exact />
+          <PrivateRoute component={Connect} path="/connect" exact />
+          <PrivateRoute component={AddPost} path="/addpost" exact />
+          <PrivateRoute
+            component={Profile}
+            path="/profile/:username"
+            exact
+          />
+          <Route component={UnknownPage} />
+        </Switch>
+      </div>
+    </Router>
+  );
+};
+
+export default connect(mapStateToProps, null)(App);
