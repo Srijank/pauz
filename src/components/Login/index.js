@@ -26,14 +26,14 @@ const Login = () => {
     <div className="Login container-1">
       <Navbar />
       <main className="container-2">
-        <h1>Login</h1>
-        <p>
+        <h1 className="heading">Login</h1>
+        <p className="para">
           See what your friends are doing by loging in with your{" "}
-          <span>email and password</span>.
+          <span className="highlight">email and password</span>.
         </p>
 
-        <img src={LoginImage1} alt="Friends in windows" />
-        <form>
+        <img src={LoginImage1} alt="Friends in windows" width="100%" height="100%" />
+        <form className="fillform">
           <Input
             type="email"
             label="Email"
@@ -59,8 +59,10 @@ const Login = () => {
           />
           <Button className="primary">Login</Button>
         </form>
-        <p>Dont have an account? <span><Link to="/login">Signup here</Link></span>.</p>
-        <Link to="/forgotpassword">Forgot Password?</Link>
+        <br/>
+        <div align="center"><p className="para">Dont have an account? <span className="forgot"><Link to="/login" className="highlight">Signup here</Link></span>.<br/>
+        <Link to="/forgotpassword" className="highlight">Forgot Password?</Link>.</p>
+        </div>
       </main>
     </div>
   );

@@ -27,11 +27,12 @@ const Signup = () => {
     <div className="Signup container-1">
       <Navbar />
       <main className="container-2">
-        <h1>Signup</h1>
-        <p>
-          Register to the platform by filling out the <span>details below</span>
+        <h1 className="heading">Signup</h1>
+        <p className="para">
+          Register to the platform by filling out the <span className="highlight">details below</span>
           .
         </p>
+        
 
         <form>
           <Input
@@ -94,14 +95,14 @@ const Signup = () => {
             placeholder="Enter password again here"
           />
           <Button className="primary">Sign Up</Button>
-        </form>
-        <p>
+        </form><br/>
+        <div align="center"><p>
           Already have an account?{" "}
           <span>
-            <Link to="/login">Login here</Link>
+            <Link to="/login" className="highlight">Login here</Link>
           </span>
           .
-        </p>
+        </p></div>
       </main>
     </div>
   );
