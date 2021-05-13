@@ -4,6 +4,15 @@
   box-sizing: border-box;
 }
 
+a {
+  color: #3D3D4E;
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
 .App {
   background-color: #F0F2F5;
   height: 100vh;
@@ -14,6 +23,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
+
+  overflow: hidden;
 }
 
 .container-1 {
@@ -27,4 +38,6 @@
 .container-2 {
   background-color: #FFFFFF;
   padding: 20px;
+  margin: 10px;
+  border-radius: 14px;
 }

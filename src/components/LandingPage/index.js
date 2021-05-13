@@ -7,9 +7,9 @@ const LandingPage = () => {
   return (
     <div className="LandingPage container-1">
       <Navbar />
-      LandingPage
+      <main className="container-2">LandingPage</main>
     </div>
-  )
-}
+  );
+};
 
 export default LandingPage;
