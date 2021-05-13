@@ -1,3 +1,52 @@
 .Navbar {
   display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
+
+.Navbar .menu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  background-color: #ffffff;
+  
+  width: 0;
+  height: 100vh;
+
+  overflow-x: hidden;
+  transition: 500ms;
+  z-index: 3;
+
+  position: fixed;
+  top: 0;
+  right: 0;
+}
+
+.Navbar .menu .menu-close-btn {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin-top: 40px;
+  margin-right: 30px;
+}
+
+.Navbar .menu ul {
+  margin: 20vh;
+}
+
+.Navbar .menu ul li a {
+  display: flex;
+  margin-bottom: 10px;
+}
+
+.Navbar .menu ul li a.active {
+  color: #F15F31;
+}
+
+.Navbar .menu ul li a img {
+  margin-right: 10px;
+  height: 20px;
+  width: 20px;
+}
+
