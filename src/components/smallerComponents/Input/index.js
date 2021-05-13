@@ -13,6 +13,7 @@ const Input = (props) => {
         autoComplete={props.autoComplete}
         maxLength={props.maxLength}
         minLength={props.minLength}
+        placeholder={props.placeholder}
       />
     </div>
   );
