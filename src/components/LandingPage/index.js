@@ -1,8 +1,12 @@
 import "./LandingPage.css";
 
+// components
+import Navbar from "../smallerComponents/Navbar";
+
 const LandingPage = () => {
   return (
-    <div className="LandingPage">
+    <div className="LandingPage container-1">
+      <Navbar />
       LandingPage
     </div>
   )
