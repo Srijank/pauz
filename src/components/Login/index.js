@@ -43,6 +43,7 @@ const Login = () => {
             automComplete="off"
             minLength="5"
             maxLength="30"
+            placeholder="Enter your email here"
           />
 
           <Input
@@ -54,10 +55,11 @@ const Login = () => {
             automComplete="off"
             minLength="6"
             maxLength="10"
+            placeholder="Enter your password here"
           />
           <Button className="primary">Login</Button>
         </form>
-        <p>Already have an account? <span><Link to="/login">Login here</Link></span>.</p>
+        <p>Dont have an account? <span><Link to="/login">Signup here</Link></span>.</p>
         <Link to="/forgotpassword">Forgot Password?</Link>
       </main>
     </div>
