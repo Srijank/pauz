@@ -25,6 +25,7 @@ const Navbar = () => {
             setIsMenuOpen(false);
           }}
           src={menuCloseIcon}
+          alt="menu close"
         />
         <ul>
           <li>
@@ -56,6 +57,7 @@ const Navbar = () => {
           }}
           src={menuIcon}
           className="menu-btn"
+          alt="menu"
         ></img>
       )}
     </div>
