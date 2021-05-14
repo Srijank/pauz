@@ -1,7 +1,7 @@
 import "./Post.css";
 
 import profileIcon from "../../assets/images/profile-icon.png";
-import postSamplePic from "../../assets/images/post-sample-pic.png";
+import postSamplePic from "../../assets/images/sample-post-pic.png";
 import Button from "../smallerComponents/Button";
 
 const Post = () => {
