@@ -45,7 +45,8 @@ const Signup = (props) => {
         password2: undefined,
       };
       axios
-        .post(`${process.env.REACT_APP_API_URL}/users/`, data)
+        // .post(`${process.env.REACT_APP_API_URL}/users/`, data)
+        .post(`http://localhost:5000/api/users/`, data)
         .then((res) => {
           console.log(res);
           console.log(res.data.message);
@@ -87,14 +88,14 @@ const Signup = (props) => {
         </p>
         
 
-        <form>
+        <form onSubmit={handleSubmit}>
           <Input
             type="email"
             label="Email"
             name="email"
             value={signupDetails.email}
             onChange={handleInputChange}
-            automComplete="off"
+            autoComplete="off"
             minLength="5"
             maxLength="30"
             placeholder="Enter your email here"
@@ -106,7 +107,7 @@ const Signup = (props) => {
             name="username"
             value={signupDetails.username}
             onChange={handleInputChange}
-            automComplete="off"
+            autoComplete="off"
             minLength="1"
             maxLength="20"
             placeholder="Enter your username here"
@@ -118,7 +119,7 @@ const Signup = (props) => {
             name="name"
             value={signupDetails.name}
             onChange={handleInputChange}
-            automComplete="off"
+            autoComplete="off"
             minLength="1"
             maxLength="30"
             placeholder="Enter your name here"
@@ -130,7 +131,7 @@ const Signup = (props) => {
             name="password1"
             value={signupDetails.password1}
             onChange={handleInputChange}
-            automComplete="off"
+            autoComplete="off"
             minLength="6"
             maxLength="10"
             placeholder="Enter a password here"
@@ -142,7 +143,7 @@ const Signup = (props) => {
             name="password2"
             value={signupDetails.password2}
             onChange={handleInputChange}
-            automComplete="off"
+            autoComplete="off"
             minLength="6"
             maxLength="10"
             placeholder="Enter password again here"

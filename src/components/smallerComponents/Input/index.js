@@ -10,7 +10,7 @@ const Input = (props) => {
         name={props.name}
         value={props.value}
         onChange={props.onChange}
-        autoComplete={props.autoComplete}
+        autoComplete=""
         maxLength={props.maxLength}
         minLength={props.minLength}
         placeholder={props.placeholder}
