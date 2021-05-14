@@ -1,13 +1,22 @@
 import "./Signup.css";
-import { Link } from "react-router-dom";
-
-import Navbar from "../smallerComponents/Navbar";
-
-import Button from "../smallerComponents/Button";
-import Input from "../smallerComponents/Input";
+import { Link, useHistory } from "react-router-dom";
+import { connect } from "react-redux";
+import axios from "axios";
 import { useState } from "react";
 
-const Signup = () => {
+import { startLoading, stopLoading, showAlert } from "../../actions/index";
+
+import Navbar from "../smallerComponents/Navbar";
+import Button from "../smallerComponents/Button";
+import Input from "../smallerComponents/Input";
+
+const mapDispatchToProps = {
+  startLoading: startLoading,
+  stopLoading: stopLoading,
+  showAlert: showAlert,
+};
+
+const Signup = (props) => {
   const [signupDetails, setSignupDetails] = useState({
     email: "",
     username: "",
@@ -16,11 +25,55 @@ const Signup = () => {
     password2: "",
   });
 
+  const history = useHistory();
+
   const handleInputChange = (e) => {
     setSignupDetails({
       ...signupDetails,
       [e.target.name]: e.target.value,
     });
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    props.startLoading();
+    if (signupDetails.password1 === signupDetails.password2) {
+      let data = {
+        ...signupDetails,
+        password: signupDetails.password1,
+        password1: undefined,
+        password2: undefined,
+      };
+      axios
+        .post(`${process.env.REACT_APP_API_URL}/users/`, data)
+        .then((res) => {
+          console.log(res);
+          console.log(res.data.message);
+          setSignupDetails({
+            email: "",
+            username: "",
+            name: "",
+            password1: "",
+            password2: "",
+          });
+          props.stopLoading();
+          props.showAlert(res.data.message + ", You can now login!");
+          history.push("/login");
+        })
+        .catch((error) => {
+          props.stopLoading();
+          if (error.response) {
+            props.showAlert(error.response.data.message);
+          } else {
+            props.showAlert(
+              error.message + ", Please try again after some time!"
+            );
+          }
+        });
+    } else {
+      props.showAlert("Passwords do not match!");
+      props.stopLoading();
+    }
   };
 
   return (
@@ -82,7 +135,7 @@ const Signup = () => {
             maxLength="10"
             placeholder="Enter a password here"
           />
-          
+
           <Input
             type="password"
             label="Confirm Password"
@@ -108,4 +161,4 @@ const Signup = () => {
   );
 };
 
-export default Signup;
+export default connect(null, mapDispatchToProps)(Signup);
