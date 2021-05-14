@@ -1,0 +1,91 @@
+.landingimage {
+  width: 285px;
+  height: 285px;
+  margin-left: 25px;
+  margin-top: 30px;
+  margin-bottom: 10px;
+}
+.main {
+  height: 100%;
+}
+.mainheading {
+  width: 81px;
+  height: 36px;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 1500;
+  font-size: 40px;
+  line-height: 36px;
+  margin-top: 5px;
+  display: flex;
+  color: #f15f31;
+  margin-bottom: 20px;
+}
+
+/*Animation */
+@keyframes animate {
+  from {
+    left: 0px;
+  }
+  to {
+    left: 300px;
+  }
+}
+
+.miniheading {
+  margin-top: 10px;
+  margin-bottom: 20px;
+  width: 302px;
+  height: 96px;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 24px;
+  display: flex;
+  align-items: center;
+  color: #000000;
+}
+
+.image {
+  margin-top: 40px;
+}
+
+.content {
+  position: absolute;
+  z-index: 1;
+  background-image: url(Landpage2.png);
+  width: 84%;
+  height: 80%;
+  margin-top: 30px;
+  align-items: center;
+}
+
+.head {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 1500;
+  font-size: 36px;
+  line-height: 36px;
+  margin-top: 5px;
+  display: flex;
+  color: #f15f31;
+  margin-bottom: 20px;
+  padding-left: 20px;
+  padding-top: 20px;
+}
+
+.par {
+  color: white;
+  padding-left: 20px;
+  padding-top: 5px;
+  padding-right: 15px;
+  font-size: 20;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 24px;
+  display: flex;
+  align-items: center;
+}
