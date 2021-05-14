@@ -59,7 +59,7 @@ const AppNavbar = (props) => {
             </NavLink>
           </li>
           <li>
-            <NavLink to="/newpost" activeClassName="active" exact>
+            <NavLink to="/addpost" activeClassName="active" exact>
               <img src={addPostIcon} alt="add post" />
               Post
             </NavLink>
