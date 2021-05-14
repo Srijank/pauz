@@ -21,8 +21,8 @@ const Alert = (props) => {
       <div className="alert-content">
         <p>{props.alert}</p>
         <Button
-          buttonType="pri-btn"
-          handleClick={() => {
+          className="primary"
+          onClick={() => {
             props.removeAlert();
           }}
         >
