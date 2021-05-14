@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
 
 * {
   margin: 0;
@@ -7,7 +7,7 @@
 }
 
 a {
-  color: #3D3D4E;
+  color: #3d3d4e;
   text-decoration: none;
   cursor: pointer;
 }
@@ -17,8 +17,8 @@ li {
 }
 
 .App {
-  background-color: #F0F2F5;
-  font-family: 'Inter', sans-serif;
+  background-color: #f0f2f5;
+  font-family: "Inter", sans-serif;
 
   width: 100vw;
   min-height: 100vh;
@@ -28,7 +28,7 @@ li {
   justify-content: center;
   align-items: center;
 
-  overflow: hidden;
+  /* overflow: hidden; */
 }
 
 .container-1 {
@@ -40,7 +40,7 @@ li {
 }
 
 .container-2 {
-  background-color: #FFFFFF;
+  background-color: #ffffff;
   padding: 20px;
   margin: 10px;
   border-radius: 14px;
