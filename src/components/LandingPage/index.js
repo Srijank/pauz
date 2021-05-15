@@ -5,6 +5,7 @@ import Button from "../smallerComponents/Button";
 import Navbar from "../smallerComponents/Navbar";
 import Landpage1 from "../../assets/images/Landpage1.png";
 import Landpage2 from "../../assets/images/Landpage2.png";
+import { Link } from "react-router-dom";
 
 const LandingPage = () => {
   return (
@@ -17,7 +18,7 @@ const LandingPage = () => {
         </b>
 
         </p>
-        <Button className="primary"><b>Sign Up Now</b></Button>
+        <Link to ="/Signup" ><Button className="primary"><b>Sign Up Now</b></Button></Link>
         
         <div className="content">
         <h2 className="head">Connect with only close ones</h2>

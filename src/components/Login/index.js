@@ -96,7 +96,7 @@ const Login = (props) => {
           <Button className="primary">Login</Button>
         </form>
         <br/>
-        <div align="center"><p className="para">Dont have an account? <span className="forgot"><Link to="/login" className="highlight">Signup here</Link></span>.<br/>
+        <div align="center"><p className="para">Dont have an account? <span className="forgot"><Link to="/Signup" className="highlight">Signup here</Link></span>.<br/>
         <Link to="/forgotpassword" className="highlight">Forgot Password?</Link>.</p>
         </div>
       </main>
